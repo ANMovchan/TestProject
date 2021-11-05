@@ -115,6 +115,9 @@ public class Main {
     }
 
     private static String convertToRom(int fNumber) {
+        if(fNumber < 1){
+            throw new RuntimeException();
+        }
         int amountOfTen = fNumber / 10;
         int ost = fNumber % 10;
         String fPart = "";
